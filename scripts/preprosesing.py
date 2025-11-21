@@ -19,8 +19,8 @@ class preporsesardor:
         df=data.copy()
         return df
     def eliminarColumnas (self, df):
-        print("se realizo eliminar columnas no relevantes para el modelo")
-        df=df.drop(columns=['ID','eyesight(left)', 'eyesight(right)', 'hearing(left)', 'hearing(right)', 'oral', 'dental caries', 'tartar'])
+        print("se realizo eliminar columnas no relevantes para el modelo o con poca relacion")
+        df=df.drop(columns=['ID','eyesight(left)', 'eyesight(right)', 'hearing(left)', 'hearing(right)', 'oral', 'dental caries', 'tartar','Cholesterol','LDL','Urine protein','systolic','HDL'])
         return df
     def convercionEnDummys (self, df):
         dfdumy=df.copy()
@@ -36,6 +36,7 @@ class preporsesardor:
         df = df.drop(['gender','F','M'], axis=1)
         print("se realizo eliminar columnas gender que se convirtia a dummys")
         return df
+
     def separarX_Y (self, df):
         y=df['smoking']
         x=df.drop('smoking', axis=1)

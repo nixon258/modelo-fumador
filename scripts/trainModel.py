@@ -15,7 +15,7 @@ class trainModel:
         self.exportar(modelo, metrics)
 
     def preparardt(self,x,y):
-        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.15, random_state=23)
+        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.35, random_state=42)
         print("se separan las porciones para el entreanmieto y el testeo")
         return X_train, X_test, y_train, y_test
 

@@ -38,29 +38,13 @@ def main():
         "Glucosa en ayunas (mg/dL)", 50, 300, 97,
         help="Glucosa en ayunas: niveles altos indican riesgo de diabetes.\nRangos: <100 Normal, 100-125 Prediabetes, 126+ Diabetes"
     )
-    cholesterol = st.number_input(
-        "Colesterol total", 80, 400, 190,
-        help="Colesterol total: niveles altos incrementan riesgo cardiovascular.\nRangos: <200 Normal, 200-239 Límite, 240+ Alto"
-    )
     triglyceride = st.number_input(
         "Triglicéridos", 30, 500, 130,
         help="Triglicéridos: altos aumentan riesgo de arteriosclerosis.\nRangos: <150 Normal, 150-199 Límite, 200-499 Alto, 500+ Muy alto"
     )
-    hdl = st.number_input(
-        "HDL", 10, 120, 55,
-        help="HDL (bueno): protege corazón. Valores bajos aumentan riesgo.\nRangos: Hombre <40 bajo, Mujer <50 bajo, 40-60/50-60 normal, >60 óptimo"
-    )
-    ldl = st.number_input(
-        "LDL", 30, 300, 112,
-        help="LDL (malo): altos niveles aumentan riesgo cardíaco.\nRangos: <100 óptimo, 100-129 Casi óptimo, 130-159 Límite, 160-189 Alto, 190+ Muy alto"
-    )
     hemoglobin = st.number_input(
         "Hemoglobina", 5.0, 20.0, 14.7,
         help="Hemoglobina: transporta oxígeno; fumar puede reducir eficacia.\nRangos: Hombre 13.8-17.2, Mujer 12.1-15.1 g/dL"
-    )
-    urine_protein = st.number_input(
-        "Proteína en orina", 0, 5, 1,
-        help="Proteína en orina: indica posible daño renal. Fumar aumenta riesgo.\nRangos: 0 Normal, 1-2 Leve, 3+ Alto"
     )
 
     serum_creatinine = st.number_input(
@@ -95,12 +79,8 @@ def main():
         "systolic": systolic,
         "relaxation": relaxation,
         "fasting blood sugar": fasting_bs,
-        "Cholesterol": cholesterol,
         "triglyceride": triglyceride,
-        "HDL": hdl,
-        "LDL": ldl,
         "hemoglobin": hemoglobin,
-        "Urine protein": urine_protein,
         "serum creatinine": serum_creatinine,
         "AST": ast,
         "ALT": alt,
