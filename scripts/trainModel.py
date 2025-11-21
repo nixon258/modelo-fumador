@@ -15,11 +15,11 @@ class trainModel:
         self.exportar(modelo, metrics)
 
     def preparardt(self,x,y):
-        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.35, random_state=17)
+        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.15, random_state=23)
         return X_train, X_test, y_train, y_test
 
     def entrnarmodel(self,X_train, y_train):
-        modelo = LogisticRegression()
+        modelo = LogisticRegression(max_iter=3000)
         modelo.fit(X_train, y_train)
         return modelo
 

@@ -6,18 +6,18 @@ import pandas as pd
 
 
 def main():
-    print("========== CARGANDO BASE DE DATOS ==========")
+    print("========== cargando data frame ==========")
     loader = Loader("data/smoking.csv")
     df= loader.loadDB()
 
-    print("========== PREPROCESANDO DATOS ==========")
+    print("========== alistando los datos ==========")
     prep = preporsesardor(df)
 
     X = prep.X
     Y = prep.Y
 
     print("========== ENTRENANDO MODELO ==========")
-    trainer = trainModel(X, Y)
+    trainModel(X, Y)
 
     print("========== PREDICCIÓN DE PRUEBA ==========")
     # Ejemplo de datos de prueba
