@@ -1,5 +1,5 @@
 import streamlit as st
-from modules.predecirFumador import predecirFumador
+from scripts.predict import predecirFuamdor
 
 def main():
 
@@ -58,7 +58,7 @@ def main():
     }
 
     if st.button("Predecir"):
-        predictor = predecirFumador()
+        predictor = predecirFuamdor()
         resultado, prob = predictor.predecir(datos)
 
         st.success(f"Resultado: **{resultado}**")
