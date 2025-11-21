@@ -20,7 +20,7 @@ class trainModel:
         return X_train, X_test, y_train, y_test
 
     def entrnarmodel(self,X_train, y_train):
-        modelo = LogisticRegression(max_iter=3000)
+        modelo = LogisticRegression(max_iter=4000)
         modelo.fit(X_train, y_train)
         print("se entrena el modelo")
         return modelo
