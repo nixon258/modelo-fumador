@@ -4,6 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from scripts.preprosesing import preporsesardor
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+from utils.paths import ruta_absoluta
+
 
 class trainModel:
     def __init__(self,x,y):
@@ -36,7 +38,7 @@ class trainModel:
         return metrics
 
     def exportar(self,modelo,metrics):
-        joblib.dump(modelo, "models/modelo_fuamdor.joblib")
+        joblib.dump(modelo, ruta_absoluta("models/modelo_fumador.joblib"))
         print("Modelo guardado en 'models/modelo_fumador.joblib'")
 
 

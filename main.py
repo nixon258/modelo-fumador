@@ -22,12 +22,25 @@ def main():
     print("========== PREDICCIÓN DE PRUEBA ==========")
     # Ejemplo de datos de prueba
     datos_usuario = {
-        "age": 40,
-        "height(cm)": 175,
-        "weight(kg)": 70,
-        "waist(cm)": 90,
-        "Male": 1,
-        "Female": 0
+        'age': 40,
+    'height(cm)': 175,
+    'weight(kg)': 75,
+    'waist(cm)': 85.0,
+    'systolic': 122,
+    'relaxation': 82,
+    'fasting blood sugar': 97,
+    'Cholesterol': 190,
+    'triglyceride': 130,
+    'HDL': 55,
+    'LDL': 112,
+    'hemoglobin': 14.7,
+    'Urine protein': 1,
+    'serum creatinine': 1.1,
+    'AST': 24,
+    'ALT': 25,
+    'Gtp': 27,
+    'Male': 1,
+    'Female': 0
     }
 
     predictor = predecirFuamdor()

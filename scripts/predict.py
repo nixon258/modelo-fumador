@@ -1,10 +1,11 @@
 import joblib
 import pandas as pd
+from utils.paths import ruta_absoluta
 
 class predecirFuamdor:
 
     def __init__(self):
-        self.modelo = joblib.load("models/modelo_fumador.joblib")
+        self.modelo = joblib.load(ruta_absoluta("models/modelo_fumador.joblib"))
         self.features = self.modelo.feature_names_in_
 
     def predecir(self, datos_usuario):
