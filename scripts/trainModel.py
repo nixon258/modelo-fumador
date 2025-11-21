@@ -16,18 +16,19 @@ class trainModel:
 
     def preparardt(self,x,y):
         X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.15, random_state=23)
+        print("se separan las porciones para el entreanmieto y el testeo")
         return X_train, X_test, y_train, y_test
 
     def entrnarmodel(self,X_train, y_train):
         modelo = LogisticRegression(max_iter=3000)
         modelo.fit(X_train, y_train)
+        print("se entrena el modelo")
         return modelo
 
     def evaluar(self,modelo,X_test,y_test):
-        # Evaluar exactitud
         y_pred = modelo.predict(X_test)
         y_proba = modelo.predict_proba(X_test)[:, 1]
-
+        print("se evalua el modelo")
         metrics = {
             "accuracy": round(accuracy_score(y_test, y_pred), 3),
             "precision": round(precision_score(y_test, y_pred), 3),

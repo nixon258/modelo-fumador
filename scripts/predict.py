@@ -15,7 +15,7 @@ class predecirFuamdor:
         prob = self.modelo.predict_proba(df)[0][1]
         pred = self.modelo.predict(df)[0]
 
-        resultado = "Fumador" if pred == 1 else "No fumador"
+        resultado = "es fumador" if pred == 1 else "No es fumador"
         print(f"Resultado: {resultado} (Probabilidad: {prob:.2%})")
 
         return resultado, prob

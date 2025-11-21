@@ -20,7 +20,6 @@ def main():
     trainModel(X, Y)
 
     print("========== PREDICCIÓN DE PRUEBA ==========")
-    # Ejemplo de datos de prueba
     datos_usuario = {
         'age': 40,
     'height(cm)': 175,
