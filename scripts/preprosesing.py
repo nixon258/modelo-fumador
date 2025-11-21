@@ -3,7 +3,7 @@ import pandas as pd
 class preporsesardor:
 
     def __init__(self, df):
-        print("📌 Iniciando preprocesamiento automático...")
+        print("Iniciando preprocesamiento")
 
         df = self.copiardf(df)
         df = self.eliminarColumnas(df)
@@ -11,7 +11,7 @@ class preporsesardor:
         df = self.EliminarColumDumis(df)
         self.X, self.Y = self.separarX_Y(df)
 
-        print("✅ Preprocesamiento completado.")
+        print("Preprocesamiento listo")
 
 
     def copiardf (self, data):
